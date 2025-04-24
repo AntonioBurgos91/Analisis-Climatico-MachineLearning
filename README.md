@@ -1,25 +1,85 @@
-# Analisis-Climatico-MachineLearning
+# Predicción de Lluvia en Australia - Proyecto de Machine Learning
 
-Este proyecto explora datos meteorológicos de Australia utilizando Python y técnicas de Machine Learning. Se realizan procesos de limpieza, transformación y visualización de datos para extraer información relevante sobre patrones climáticos.
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.0-red)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-📌 Contenido del Proyecto
-✔ Carga de datos desde una fuente externa.
-✔ Limpieza y preprocesamiento de datos.
-✔ Visualización de patrones climáticos con Seaborn y Matplotlib.
-✔ Transformación de características con Scikit-Learn.
+Proyecto profesional de machine learning para predecir la ocurrencia de lluvia al día siguiente utilizando datos meteorológicos históricos de Australia. Implementa un pipeline completo de ciencia de datos con optimización avanzada de modelos.
 
-🛠️ Tecnologías Utilizadas
-🔹 Python
-🔹 Pandas
-🔹 Matplotlib
-🔹 Seaborn
-🔹 Scikit-Learn
+## Tabla de Contenidos
+- [Descripción del Proyecto](#descripción-del-proyecto)
+- [Características Clave](#características-clave)
+- [Dataset](#dataset)
+- [Flujo de Trabajo](#flujo-de-trabajo)
+- [Tecnologías Utilizadas](#tecnologías-utilizadas)
+- [Instalación y Ejecución](#instalación-y-ejecución)
+- [Resultados y Métricas](#resultados-y-métricas)
+- [Conclusiones](#conclusiones)
+- [Contribución](#contribución)
+- [Licencia](#licencia)
+- [Contacto](#contacto)
 
-1️⃣ Clona este repositorio
-git clone https://github.com/AntonioBurgos91/Analisis-Climatico-MachineLearning.git
+## Descripción del Proyecto
+Este proyecto demuestra habilidades profesionales en el ciclo completo de ciencia de datos:
+- **Objetivo**: Predecir si lloverá al día siguiente (target: `RainTomorrow`) usando datos meteorológicos históricos
+- **Enfoque**: Comparación de múltiples algoritmos de ML con optimización de hiperparámetros
+- **Valor**: Sistema predictivo aplicable en agricultura, logística y gestión de recursos naturales
 
-2️⃣ Instala las dependencias:
-pip install -r requirements.txt
+## Características Clave
+✅ **Preprocesamiento Avanzado**  
+✅ **Ingeniería de Características**  
+✅ **Optimización con GridSearchCV**  
+✅ **Validación Cruzada Estratificada**  
+✅ **Análisis de Balance de Clases**  
+✅ **Pipeline Reproducible**  
+✅ **Documentación Profesional**
 
-3️⃣ Abre el Jupyter Notebook y ejecuta el análisis:
-jupyter notebook
+## Dataset
+**Origen**: [WeatherAUS Dataset](https://www.kaggle.com/jsphyg/weather-dataset-rattle-package)  
+**Muestras**: 145,460 registros iniciales  
+**Características**: 23 variables meteorológicas incluyendo:
+- Temperaturas (máxima/mínima)
+- Humedad
+- Velocidad del viento
+- Presión atmosférica
+- Localización geográfica
+
+**Limpieza**:
+- Eliminación de valores nulos
+- Filtrado por ubicaciones cercanas a Melbourne
+- Creación de características temporales (estaciones del año)
+
+## Flujo de Trabajo
+1. **Carga y Exploración de Datos**
+   - Análisis de distribución de clases
+   - Inspección de valores faltantes
+
+2. **Preprocesamiento**
+   - Eliminación de registros incompletos
+   - Transformación de fechas a estaciones
+   - Normalización numérica (StandardScaler)
+   - Codificación categórica (OneHotEncoder)
+
+3. **Modelado**
+   - División estratificada train-test (80-20)
+   - Implementación de pipelines para:
+     - Random Forest Classifier
+     - Logistic Regression
+   - Optimización de hiperparámetros con GridSearchCV
+   - Validación cruzada (5 folds)
+
+4. **Evaluación**
+   - Matrices de confusión
+   - Reportes de clasificación
+   - Análisis de precisión/recall
+
+## Tecnologías Utilizadas
+| Categoría           | Herramientas                                                                 |
+|---------------------|------------------------------------------------------------------------------|
+| Lenguaje            | Python 3.8                                                                  |
+| Procesamiento       | Pandas, NumPy                                                               |
+| Visualización       | Matplotlib, Seaborn                                                         |
+| Machine Learning    | Scikit-learn (RandomForest, LogisticRegression, GridSearchCV, Pipeline)     |
+| Preprocesamiento    | StandardScaler, OneHotEncoder, ColumnTransformer                            |
+| Control de Versiones| Git                                                                         |
+
