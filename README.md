@@ -1,85 +1,58 @@
-# Predicción de Lluvia en Australia - Proyecto de Machine Learning
+# 🌍 Análisis Climático con Machine Learning
 
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
-![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.0-red)
-![License](https://img.shields.io/badge/License-MIT-green)
+> 📊 Proyecto de ciencia de datos enfocado en el análisis de la evolución de la temperatura global utilizando modelos de Machine Learning.
 
-Proyecto profesional de machine learning para predecir la ocurrencia de lluvia al día siguiente utilizando datos meteorológicos históricos de Australia. Implementa un pipeline completo de ciencia de datos con optimización avanzada de modelos.
+---
 
-## Tabla de Contenidos
-- [Descripción del Proyecto](#descripción-del-proyecto)
-- [Características Clave](#características-clave)
-- [Dataset](#dataset)
-- [Flujo de Trabajo](#flujo-de-trabajo)
-- [Tecnologías Utilizadas](#tecnologías-utilizadas)
-- [Instalación y Ejecución](#instalación-y-ejecución)
-- [Resultados y Métricas](#resultados-y-métricas)
-- [Conclusiones](#conclusiones)
-- [Contribución](#contribución)
-- [Licencia](#licencia)
-- [Contacto](#contacto)
+## 🧠 Descripción del Proyecto
 
-## Descripción del Proyecto
-Este proyecto demuestra habilidades profesionales en el ciclo completo de ciencia de datos:
-- **Objetivo**: Predecir si lloverá al día siguiente (target: `RainTomorrow`) usando datos meteorológicos históricos
-- **Enfoque**: Comparación de múltiples algoritmos de ML con optimización de hiperparámetros
-- **Valor**: Sistema predictivo aplicable en agricultura, logística y gestión de recursos naturales
+Este proyecto tiene como objetivo analizar el **cambio climático** a través del estudio de datos históricos de temperatura global desde 1880. Utilizando algoritmos de **Machine Learning**, se construyen modelos predictivos capaces de identificar tendencias y visualizar la evolución térmica del planeta a lo largo del tiempo.
 
-## Características Clave
-✅ **Preprocesamiento Avanzado**  
-✅ **Ingeniería de Características**  
-✅ **Optimización con GridSearchCV**  
-✅ **Validación Cruzada Estratificada**  
-✅ **Análisis de Balance de Clases**  
-✅ **Pipeline Reproducible**  
-✅ **Documentación Profesional**
+---
 
-## Dataset
-**Origen**: [WeatherAUS Dataset](https://www.kaggle.com/jsphyg/weather-dataset-rattle-package)  
-**Muestras**: 145,460 registros iniciales  
-**Características**: 23 variables meteorológicas incluyendo:
-- Temperaturas (máxima/mínima)
-- Humedad
-- Velocidad del viento
-- Presión atmosférica
-- Localización geográfica
+## ⚙️ Tecnologías y Librerías Utilizadas
 
-**Limpieza**:
-- Eliminación de valores nulos
-- Filtrado por ubicaciones cercanas a Melbourne
-- Creación de características temporales (estaciones del año)
+- **Python**
+- **Pandas** – Manipulación de datos
+- **Matplotlib & Seaborn** – Visualización
+- **Scikit-learn** – Modelos de ML y evaluación
+- **XGBoost** – Modelo avanzado de regresión
+- **Jupyter Notebook** – Desarrollo y documentación interactiva
 
-## Flujo de Trabajo
-1. **Carga y Exploración de Datos**
-   - Análisis de distribución de clases
-   - Inspección de valores faltantes
+---
 
-2. **Preprocesamiento**
-   - Eliminación de registros incompletos
-   - Transformación de fechas a estaciones
-   - Normalización numérica (StandardScaler)
-   - Codificación categórica (OneHotEncoder)
+## 📈 Modelos Utilizados
 
-3. **Modelado**
-   - División estratificada train-test (80-20)
-   - Implementación de pipelines para:
-     - Random Forest Classifier
-     - Logistic Regression
-   - Optimización de hiperparámetros con GridSearchCV
-   - Validación cruzada (5 folds)
+Se aplicaron y compararon distintos modelos de regresión para predecir la temperatura media anual:
 
-4. **Evaluación**
-   - Matrices de confusión
-   - Reportes de clasificación
-   - Análisis de precisión/recall
+- 🔹 **Regresión Lineal**
+- 🔹 **Random Forest Regressor**
+- 🔹 **XGBoost Regressor**
 
-## Tecnologías Utilizadas
-| Categoría           | Herramientas                                                                 |
-|---------------------|------------------------------------------------------------------------------|
-| Lenguaje            | Python 3.8                                                                  |
-| Procesamiento       | Pandas, NumPy                                                               |
-| Visualización       | Matplotlib, Seaborn                                                         |
-| Machine Learning    | Scikit-learn (RandomForest, LogisticRegression, GridSearchCV, Pipeline)     |
-| Preprocesamiento    | StandardScaler, OneHotEncoder, ColumnTransformer                            |
-| Control de Versiones| Git                                                                         |
+Cada modelo fue evaluado mediante métricas como **MAE**, **MSE**, **RMSE**, y visualizaciones de las predicciones vs. los datos reales.
 
+---
+
+## 🌡️ Principales Resultados
+
+- 📉 Se observa una clara tendencia de aumento sostenido en la temperatura global desde 1880.
+- 📊 El modelo **XGBoost** ofreció el mejor rendimiento predictivo entre los probados.
+- 📌 Las visualizaciones ayudan a comunicar de forma efectiva el impacto del cambio climático.
+
+---
+
+## 🔍 Visualizaciones Destacadas
+
+- Gráfico de líneas de la temperatura media global desde 1880.
+- Comparativas entre predicción y valores reales por modelo.
+- Tendencia de error residual de los modelos.
+
+---
+
+## 🚀 Cómo Ejecutarlo
+
+1. Clona el repositorio:
+
+   ```bash
+   git clone https://github.com/AntonioBurgos91/Analisis-Climatico-MachineLearning.git
+   cd Analisis-Climatico-MachineLearning
