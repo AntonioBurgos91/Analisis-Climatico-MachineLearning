@@ -49,10 +49,103 @@ Cada modelo fue evaluado mediante métricas como **MAE**, **MSE**, **RMSE**, y v
 
 ---
 
-## 🚀 Cómo Ejecutarlo
+## 🚀 Cómo Ejecutarlo en Localhost
 
-1. Clona el repositorio:
+### Método 1: Instalación Automática (Recomendado)
 
+#### En Linux/Mac:
+```bash
+# 1. Clona el repositorio
+git clone https://github.com/AntonioBurgos91/Analisis-Climatico-MachineLearning.git
+cd Analisis-Climatico-MachineLearning
+
+# 2. Ejecuta el script de setup
+./setup.sh
+
+# 3. Activa el entorno virtual
+source venv/bin/activate
+
+# 4. Inicia Jupyter Notebook
+jupyter notebook
+```
+
+#### En Windows:
+```cmd
+# 1. Clona el repositorio
+git clone https://github.com/AntonioBurgos91/Analisis-Climatico-MachineLearning.git
+cd Analisis-Climatico-MachineLearning
+
+# 2. Ejecuta el script de setup
+setup.bat
+
+# 3. Activa el entorno virtual
+venv\Scripts\activate.bat
+
+# 4. Inicia Jupyter Notebook
+jupyter notebook
+```
+
+### Método 2: Instalación Manual
+
+1. **Clona el repositorio:**
    ```bash
    git clone https://github.com/AntonioBurgos91/Analisis-Climatico-MachineLearning.git
    cd Analisis-Climatico-MachineLearning
+   ```
+
+2. **Crea un entorno virtual:**
+   ```bash
+   python3 -m venv venv
+   ```
+
+3. **Activa el entorno virtual:**
+
+   En Linux/Mac:
+   ```bash
+   source venv/bin/activate
+   ```
+
+   En Windows:
+   ```cmd
+   venv\Scripts\activate.bat
+   ```
+
+4. **Instala las dependencias:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+5. **Inicia Jupyter Notebook:**
+   ```bash
+   jupyter notebook
+   ```
+
+6. **Abre el notebook:**
+   - Se abrirá automáticamente tu navegador
+   - Navega y abre el archivo `Analisis-Climatico-MachineLearning.ipynb`
+   - Ejecuta las celdas en orden para ver el análisis completo
+
+### 📋 Requisitos Previos
+
+- Python 3.8 o superior
+- pip (gestor de paquetes de Python)
+- Navegador web moderno
+
+### 🔧 Solución de Problemas
+
+Si encuentras algún error durante la instalación:
+
+1. **Error de permisos en Linux/Mac:**
+   ```bash
+   chmod +x setup.sh
+   ```
+
+2. **Error al instalar dependencias:**
+   ```bash
+   pip install --upgrade pip
+   pip install -r requirements.txt
+   ```
+
+3. **Jupyter no se inicia:**
+   - Verifica que el entorno virtual esté activado
+   - Reinstala Jupyter: `pip install --force-reinstall jupyter notebook`
